@@ -1,5 +1,5 @@
-POST - https://demo.docusign.net/restapi/v2/accounts/12345678/envelopes
-
+POST - https://demo.docusign.net/restapi/v2/accounts/{{accountId}}/envelopes
+Content-Type:application/json
 
 {
   "enforceSignerVisibility": true,
@@ -24,7 +24,18 @@ POST - https://demo.docusign.net/restapi/v2/accounts/12345678/envelopes
       {
         "email": "iamthebatman@jakedstest.xyz",
         "name": "Bruce Wayne",
-        "recipientId": 2
+        "recipientId": 2,
+        "accessCode": "98371",
+        "tabs": {
+          "signHereTabs": [
+            {
+              "xPosition": "200",
+              "yPosition": "100",
+              "documentId": "1",
+              "pageNumber": "1"
+            }
+          ]
+        }
       }
     ]
   },
