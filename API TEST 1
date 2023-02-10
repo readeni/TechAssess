@@ -1,4 +1,4 @@
-POST - https://demo.docusign.net/restapi/accounts/12345678/envelopes
+POST - https://demo.docusign.net/restapi/v2/accounts/12345678/envelopes
 
 
 {
@@ -14,28 +14,30 @@ POST - https://demo.docusign.net/restapi/accounts/12345678/envelopes
             {
               "xPosition": "100",
               "yPosition": "100",
-              "documentId": "2",
+              "documentId": "1",
               "pageNumber": "1"
             }
           ]
         }
       },
       {
-        "email": "",
+        "email": "brucewayne@test.com",
         "name": "Bruce Wayne",
-        "recipientId": 1, 
+        "recipientId": 2, 
+        "accessCode": "98371",
         "tabs": {
           "signHereTabs": [
             {
-              "xPosition": "-95",
+              "xPosition": "95",
               "yPosition": "48",
               "documentId": "1", 
-              "pagenumber": "2"
+              "pageNumber": "2"
             }]
         }
       }
     ]
   },
+  "emailSubject": "Please see new document available to sign",
   "documents": [
     {
       "documentId": "1",
