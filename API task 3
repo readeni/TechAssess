@@ -1,0 +1,57 @@
+POST - https://demo.docusign.net/restapi/v2.1/accounts/{{accountId}}/envelopes
+Content-Type:application/json
+Authorization: Bearer {{OAuth2token}}
+
+{
+  "emailSubject": "Technical assessments task 3",
+  "status": "sent",
+  
+  "compositeTemplates": [
+    {
+      "serverTemplates": [
+        {
+          "sequence": "1",
+          "templateId":"779abcd5-f4c1-489f-9016-577be2f1ef70",
+        }
+      ],
+      "inlineTemplates": [
+        {
+          "sequence": "1",
+          "recipients": {
+            "signers": [
+              {
+                "email": "johndoe@test.test",
+                "name": "John Doe",
+                "recipientId": "1",
+                "roleName": "Signer 1"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "serverTemplates": [
+        {
+          "sequence": "2",
+          "templateId":"8a38b4dd-0c8c-4f12-98bd-797a9ee4ce2e",
+        }
+      ],
+      "inlineTemplates": [
+        {
+          "sequence": "2",
+          "recipients": {
+            "signers": [
+              {
+                "email": "janedoe@test.test",
+                "name": "Jane Doe",
+                "recipientId": "2",
+                "roleName": "Signer 2"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
